@@ -47,6 +47,12 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+        .scholar-icon {
+            color: #4285f4;
+        }
+        .scholar-icon:hover {
+            color: #1a73e8;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -93,6 +99,7 @@
                     <div class="mt-8 flex justify-center md:justify-start space-x-4">
                         <a href="https://github.com/pulkit48/" target="_blank" class="text-gray-600 hover:text-blue-600 transition text-3xl"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/pulkit-bansal-b0b2111a7/" target="_blank" class="text-gray-600 hover:text-blue-600 transition text-3xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://scholar.google.com/citations?user=vtRcosQAAAAJ&hl=en" target="_blank" class="text-gray-600 scholar-icon transition text-3xl"><i class="fas fa-graduation-cap"></i></a>
                         <a href="mailto:pulkitbansal996@gmail.com" class="text-gray-600 hover:text-blue-600 transition text-3xl"><i class="fas fa-envelope"></i></a>
                          <a href="https://wa.me/918449989976?text=" target="_blank" class="text-gray-600 hover:text-green-500 transition text-3xl"><i class="fab fa-whatsapp"></i></a>
                     </div>
@@ -188,7 +195,7 @@
                         <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
                             <li>Collaborated with <strong>Dr. Manish Shrivastava</strong> on a project of Natural Language Generation from graphical representations, including <strong>AMR</strong> and <strong>Universal Dependency (UD) Relations</strong> for Indian Languages.</li>
                             <li>Fine-tuned the <strong>BART</strong> and <strong>IndicBART</strong> models by transforming graphs into a linearized format using <strong>Preorder, Postorder,</strong> and <strong>Inorder</strong> traversal techniques.</li>
-                            <li>Integrated the attention mask with the graph’s adjacency matrix to improve token relationship modeling, achieving <strong>METEOR scores</strong> of <strong>0.76</strong> for Hindi and <strong>0.82</strong> for English in <strong>UD Relations</strong>.</li>
+                            <li>Integrated the attention mask with the graph's adjacency matrix to improve token relationship modeling, achieving <strong>METEOR scores</strong> of <strong>0.76</strong> for Hindi and <strong>0.82</strong> for English in <strong>UD Relations</strong>.</li>
                         </ul>
                     </div>
                 </div>
@@ -199,6 +206,12 @@
         <section id="publications" class="py-20">
             <h2 class="text-3xl font-bold text-center mb-2">Publications</h2>
             <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+            <div class="text-center mb-8">
+                <a href="https://scholar.google.com/citations?user=vtRcosQAAAAJ&hl=en" target="_blank" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition font-semibold">
+                    <i class="fas fa-graduation-cap mr-2"></i>
+                    View Google Scholar Profile
+                </a>
+            </div>
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <div class="bg-white p-6 rounded-xl shadow-lg publication-card">
                     <h3 class="font-bold text-lg">Finding Needles in Images: Can Multi-modal LLMs Locate Fine Details?</h3>
@@ -314,6 +327,7 @@
             <div class="flex justify-center space-x-6 mb-4">
                 <a href="https://github.com/pulkit48/" target="_blank" class="hover:text-blue-400 transition text-2xl"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/pulkit-bansal-b0b2111a7/" target="_blank" class="hover:text-blue-400 transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="https://scholar.google.com/citations?user=vtRcosQAAAAJ&hl=en" target="_blank" class="hover:text-blue-400 transition text-2xl"><i class="fas fa-graduation-cap"></i></a>
                 <a href="mailto:pulkitbansal996@gmail.com" class="hover:text-blue-400 transition text-2xl"><i class="fas fa-envelope"></i></a>
                 <a href="https://wa.me/918449989976?text=" target="_blank" class="hover:text-green-400 transition text-2xl"><i class="fab fa-whatsapp"></i></a>
             </div>
@@ -340,78 +354,4 @@
         }
     </script>
     
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            tsParticles.load("particles-js", {
-                fpsLimit: 60,
-                interactivity: {
-                    events: {
-                        onHover: {
-                            enable: true,
-                            mode: "repulse",
-                        },
-                        onClick: {
-                            enable: true,
-                            mode: "push",
-                        },
-                        resize: true,
-                    },
-                    modes: {
-                        repulse: {
-                            distance: 100,
-                            duration: 0.4,
-                        },
-                        push: {
-                            quantity: 4,
-                        },
-                    },
-                },
-                particles: {
-                    color: {
-                        value: ["#3b82f6", "#10b981", "#60a5fa", "#ef4444", "#8b5cf6"],
-                    },
-                    links: {
-                        color: "#cbd5e0", // Lighter gray for links
-                        distance: 150,
-                        enable: true,
-                        opacity: 0.4,
-                        width: 1,
-                    },
-                    collisions: {
-                        enable: true,
-                    },
-                    move: {
-                        direction: "none",
-                        enable: true,
-                        outModes: {
-                            default: "bounce",
-                        },
-                        random: false,
-                        speed: 1, // Slow movement speed
-                        straight: false,
-                    },
-                    number: {
-                        density: {
-                            enable: true,
-                            area: 900,
-                        },
-                        value: 75, // A moderate number of particles
-                    },
-                    opacity: {
-                        value: 0.5,
-                    },
-                    shape: {
-                        type: "circle",
-                    },
-                    size: {
-                        value: { min: 1, max: 3 },
-                    },
-                },
-                detectRetina: true,
-            });
-        });
-    </script>
-</body>
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/ts
