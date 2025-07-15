@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulkit Bansal - AI Researcher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            position: relative; /* Needed for z-index context */
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Places the canvas behind all other content */
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            border: 2px solid #fff;
+        }
+        .publication-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .publication-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div id="particles-js"></div>
+
+    <header class="sticky top-0 z-50 glass-effect shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">Pulkit Bansal</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                <a href="#experience" class="text-gray-600 hover:text-blue-600 transition">Experience</a>
+                <a href="#publications" class="text-gray-600 hover:text-blue-600 transition">Publications</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
+                <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
+                <a href="mailto:pulkitbansal996@gmail.com" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">Contact Me</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">About</a>
+            <a href="#experience" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Experience</a>
+            <a href="#publications" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Publications</a>
+            <a href="#projects" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Projects</a>
+            <a href="#skills" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Skills</a>
+            <a href="mailto:pulkitbansal996@gmail.com" class="block py-2 px-4 text-sm text-white bg-blue-600 hover:bg-blue-700">Contact Me</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="home" class="flex items-center justify-center min-h-[80vh]">
+            <div class="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <span class="text-blue-600 font-semibold">Hello, I'm</span>
+                    <h1 class="text-4xl md:text-6xl font-bold my-4">Pulkit Bansal</h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-700">AI Researcher</h2>
+                    <p class="mt-4 text-gray-600 max-w-xl mx-auto md:mx-0">
+                        I build and research cutting-edge AI in <strong>Multi-modal LLMs</strong>, <strong>Diffusion Models</strong>, and <strong>Natural Language Processing</strong>. I transform complex problems into innovative AI solutions, with hands-on experience at leading research labs.
+                    </p>
+                    <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                        <a href="https://github.com/pulkit48/" target="_blank" class="text-gray-600 hover:text-blue-600 transition text-3xl"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/pulkit-bansal-b0b2111a7/" target="_blank" class="text-gray-600 hover:text-blue-600 transition text-3xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:pulkitbansal996@gmail.com" class="text-gray-600 hover:text-blue-600 transition text-3xl"><i class="fas fa-envelope"></i></a>
+                         <a href="https://wa.me/918449989976?text=" target="_blank" class="text-gray-600 hover:text-green-500 transition text-3xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="md:w-2/5">
+                    <div class="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-blue-500">
+                        <img src="C:\Users\Lavi Bansal\Downloads\Pulkit_Code\Pulkit.jpeg" alt="Pulkit Bansal" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/320x320/EBF4FF/3B82F6?text=PB';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-2">About Me</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-2/3">
+                        <p class="text-lg text-gray-600 mb-4">
+                            I am a recent graduate from the Indian Institute of Technology (IIT) Patna with a Bachelor of Science in Mathematics and Computing, achieving a CPI of 8.92. My academic journey has equipped me with a strong foundation in computer science, mathematics, and machine learning.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-4">
+                            My primary research interests lie in the fields of Natural Language Processing, Computer Vision, and Generative AI. I have had the privilege of interning at prestigious research labs like Fujitsu Research, TCS Research, and IIIT Hyderabad, where I've contributed to cutting-edge projects on multi-modal models, diffusion models, and NLP for Indian languages.
+                        </p>
+                        
+                    </div>
+                    <div class="md:w-1/3 p-6 bg-white rounded-xl shadow-lg">
+                        <h3 class="font-bold text-xl mb-4">Education</h3>
+                        <div class="flex items-start gap-4">
+                            <div class="text-blue-600 text-2xl mt-1"><i class="fas fa-graduation-cap"></i></div>
+                            <div>
+                                <h4 class="font-semibold">Indian Institute of Technology (IIT) Patna</h4>
+                                <p class="text-sm text-gray-600">B.S. in Mathematics and Computing</p>
+                                <p class="text-sm text-gray-500">2021 - 2025</p>
+                                <p class="text-sm font-medium text-blue-600">CPI: 8.92/10.0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-2">Experience</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+            <div class="relative max-w-3xl mx-auto pl-4 border-l-2 border-gray-200">
+                
+                <div class="mb-8 relative timeline-item">
+                    <div class="p-6 bg-white rounded-xl shadow-lg">
+                        <p class="text-sm text-gray-500 mb-1">Jan 2025 - Ongoing</p>
+                        <h3 class="text-xl font-bold">Fujitsu Research of India</h3>
+                        <p class="font-semibold text-blue-600">AI-Research Intern</p>
+                        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>Worked on a project focused on enhancing the ability of <strong>Multi-modal Large Language Models (MLLMs)</strong> to locate and reason about <strong>fine-grained details</strong> within complex documents.</li>
+                            <li>Introduced <strong>Needle in Images (NiM)</strong>, a novel benchmark with <strong>1180 Q/A pairs</strong> from <strong>Newspapers, Academic papers, Restaurant menus, Lecture slides, and Magazines</strong>.</li>
+                            <li>Worked on <strong>Spot-IT</strong>, a novel methodology based on query guided dynamic attention to enhance MLLM capabilities, achieving a <strong>21.05%</strong> improvement on the <strong>NiM-Benchmark</strong> with <strong>GPT-4o</strong>.</li>
+                            <li>Worked on a new library for creating multi-agentic workflows with greater ease and control. Built multiple workflows for applications like AI Tutor, AI Scientist, and more.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-8 relative timeline-item">
+                    <div class="p-6 bg-white rounded-xl shadow-lg">
+                        <p class="text-sm text-gray-500 mb-1">July 2024 - Aug 2024</p>
+                        <h3 class="text-xl font-bold">TCS Research & Innovation Lab</h3>
+                        <p class="font-semibold text-blue-600">Research Intern</p>
+                        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>Researched <strong>fine-grained preference alignment</strong> in text-to-image diffusion models by developing a controllable synthetic data generation framework that simulates diverse failure modes.</li>
+                            <li>Designed <strong>PreFine</strong>, a rule-based synthetic pipeline that applies structured perturbations to high-quality images and ranks them using <strong>dispersion-aware scoring</strong> and difficulty-based <strong>curriculum sampling</strong>.</li>
+                            <li>Fine-tuned <strong>Stable Diffusion 1.5</strong> and <strong>SDXL-Base</strong> using <strong>Diffusion-DPO + LoRA</strong> on the generated dataset, achieving up to <strong>+15.2</strong> gain in win rates for ImageReward and <strong>+13.0</strong> in Aesthetic Score.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mb-8 relative timeline-item">
+                    <div class="p-6 bg-white rounded-xl shadow-lg">
+                        <p class="text-sm text-gray-500 mb-1">Aug 2023 - Feb 2024</p>
+                        <h3 class="text-xl font-bold">AI-NLP Lab, IIT Patna</h3>
+                        <p class="font-semibold text-blue-600">Undergraduate Research Assistant</p>
+                        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>Proposed a new framework <strong>Hin-DPO</strong> with an improved loss function for the <strong>Hindi news explanation generation</strong> task, based on the <strong>DPO</strong> technique combined with <strong>Curriculum learning</strong>.</li>
+                            <li>Introduced a <strong>Preference Ranking</strong>-based synthetic dataset for Hindi news explanations, with preferred responses scraped from various websites and rejected responses generated using various LLMs.</li>
+                            <li>Fine tuned various LLM's <strong>(Gemma2, Llama3.2, and Mistral)</strong> and PLM's <strong>(mBART and mT5)</strong> for the alignment task and find the best <strong>METEOR score</strong> of <strong>31.74</strong> and <strong>BERTScore</strong> of <strong>80.02</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative timeline-item">
+                     <div class="p-6 bg-white rounded-xl shadow-lg">
+                        <p class="text-sm text-gray-500 mb-1">May 2023 - June 2023</p>
+                        <h3 class="text-xl font-bold">LTRC Lab, IIIT Hyderabad</h3>
+                        <p class="font-semibold text-blue-600">Research Intern</p>
+                        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                            <li>Collaborated with <strong>Dr. Manish Shrivastava</strong> on a project of Natural Language Generation from graphical representations, including <strong>AMR</strong> and <strong>Universal Dependency (UD) Relations</strong> for Indian Languages.</li>
+                            <li>Fine-tuned the <strong>BART</strong> and <strong>IndicBART</strong> models by transforming graphs into a linearized format using <strong>Preorder, Postorder,</strong> and <strong>Inorder</strong> traversal techniques.</li>
+                            <li>Integrated the attention mask with the graph’s adjacency matrix to improve token relationship modeling, achieving <strong>METEOR scores</strong> of <strong>0.76</strong> for Hindi and <strong>0.82</strong> for English in <strong>UD Relations</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="publications" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-2">Publications</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-lg publication-card">
+                    <h3 class="font-bold text-lg">Finding Needles in Images: Can Multi-modal LLMs Locate Fine Details?</h3>
+                    <p class="text-sm text-gray-600 mt-2">Association for Computational Linguistics (ACL 2025)</p>
+                    <p class="mt-2 text-sm font-semibold text-blue-600">Status: Submitted</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg publication-card">
+                    <h3 class="font-bold text-lg">Sifting Truth from Spectacle! A Multimodal Hindi Dataset for Misinformation Detection...</h3>
+                    <p class="text-sm text-gray-600 mt-2">IEEE Transactions on Affective Computing</p>
+                    <p class="mt-2 text-sm font-semibold text-yellow-600">Status: Under Review</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg publication-card">
+                    <h3 class="font-bold text-lg">From Generation to Detection: Multimodal Generative AI and the Threat of Automated Misinformation</h3>
+                    <p class="text-sm text-gray-600 mt-2">European Conference on Artificial Intelligence (ECAI 2025)</p>
+                    <p class="mt-2 text-sm font-semibold text-yellow-600">Status: Under Review</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg publication-card">
+                    <h3 class="font-bold text-lg">From Fragments to Facts: A Curriculum-Driven DPO Approach for Generating Hindi News Veracity Explanations</h3>
+                    <p class="text-sm text-gray-600 mt-2">Transactions on Machine Learning Research (TMLR)</p>
+                    <p class="mt-2 text-sm font-semibold text-yellow-600">Status: Under Review</p>
+                </div>
+                 <div class="bg-white p-6 rounded-xl shadow-lg publication-card md:col-span-2">
+                    <h3 class="font-bold text-lg">GANtleTRUTH: Generating Polite, Fluent, and Factual Counter-Narratives for Fake News Using GANs</h3>
+                    <p class="text-sm text-gray-600 mt-2">Empirical Methods in Natural Language Processing (EMNLP 2025)</p>
+                    <p class="mt-2 text-sm font-semibold text-yellow-600">Status: Under Review</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-2">Projects</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="font-bold text-xl mb-2">Multiturn Chatbot with Query Expansion</h3>
+                        <p class="text-gray-600 mb-4 text-sm">A conversational AI fine-tuned on Llama2-7b with LoRA/QLoRA, capable of query expansion and domain prediction, using Gemini-1.5-pro for conversation summarization.</p>
+                        <div class="mb-4">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">PyTorch</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Hugging Face</span>
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">LLMs</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <a href="https://github.com/pulkit48/Conversational-Chatbot-with-Query-Expansion-and-Domain-Prediction" target="_blank" class="font-bold text-blue-600 hover:underline">View Source Code <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="font-bold text-xl mb-2">Satellite Image To Map Translator</h3>
+                        <p class="text-gray-600 mb-4 text-sm">A Pix2Pix GAN with an Attention U-Net generator and PatchGAN discriminator, enhanced with Deformable Convolutions, to translate satellite images into map visuals with an SSIM score of 0.78.</p>
+                        <div class="mb-4">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">PyTorch</span>
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">GANs</span>
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Computer Vision</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <a href="https://github.com/pulkit48/Satellite-Image-To-Map-Translation" target="_blank" class="font-bold text-blue-600 hover:underline">View Source Code <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-2">Skills</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4">Programming & Core CS</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-medium">C/C++</span>
+                        <span class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-medium">Python</span>
+                         <span class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-medium">R</span>
+                        <span class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-medium">MATLAB</span>
+                        <span class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-medium">Data Structures & Algorithms</span>
+                        <span class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full font-medium">OOP</span>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4">Machine Learning & Deep Learning</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">PyTorch</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">TensorFlow</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">Hugging Face</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">Scikit-Learn</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">NumPy</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">Pandas</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">Convex Optimization</span>
+                    </div>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold mb-4">Tools & Platforms</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">Git</span>
+                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">Jupyter Notebook</span>
+                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">Google Colab</span>
+                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/pulkit48/" target="_blank" class="hover:text-blue-400 transition text-2xl"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/pulkit-bansal-b0b2111a7/" target="_blank" class="hover:text-blue-400 transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:pulkitbansal996@gmail.com" class="hover:text-blue-400 transition text-2xl"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/918449989976?text=" target="_blank" class="hover:text-green-400 transition text-2xl"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2025 Pulkit Bansal. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">Built with <i class="fas fa-heart text-red-500"></i> and Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            tsParticles.load("particles-js", {
+                fpsLimit: 60,
+                interactivity: {
+                    events: {
+                        onHover: {
+                            enable: true,
+                            mode: "repulse",
+                        },
+                        onClick: {
+                            enable: true,
+                            mode: "push",
+                        },
+                        resize: true,
+                    },
+                    modes: {
+                        repulse: {
+                            distance: 100,
+                            duration: 0.4,
+                        },
+                        push: {
+                            quantity: 4,
+                        },
+                    },
+                },
+                particles: {
+                    color: {
+                        value: ["#3b82f6", "#10b981", "#60a5fa", "#ef4444", "#8b5cf6"],
+                    },
+                    links: {
+                        color: "#cbd5e0", // Lighter gray for links
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.4,
+                        width: 1,
+                    },
+                    collisions: {
+                        enable: true,
+                    },
+                    move: {
+                        direction: "none",
+                        enable: true,
+                        outModes: {
+                            default: "bounce",
+                        },
+                        random: false,
+                        speed: 1, // Slow movement speed
+                        straight: false,
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                            area: 900,
+                        },
+                        value: 75, // A moderate number of particles
+                    },
+                    opacity: {
+                        value: 0.5,
+                    },
+                    shape: {
+                        type: "circle",
+                    },
+                    size: {
+                        value: { min: 1, max: 3 },
+                    },
+                },
+                detectRetina: true,
+            });
+        });
+    </script>
+</body>
+</html>
